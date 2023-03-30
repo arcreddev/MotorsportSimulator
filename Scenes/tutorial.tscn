@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/tutorial.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1035.0
+margin_bottom = 615.0
+color = Color( 0.227451, 0.282353, 0.4, 1 )
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 223.0
+margin_top = 522.0
+margin_right = 814.0
+margin_bottom = 577.0
+rect_pivot_offset = Vector2( 206, 34 )
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 60.0
+margin_top = 53.0
+margin_right = 963.0
+margin_bottom = 492.0
+text = "The game is quite simple and the actual gameplay consists of just simulating races, seeing the results and ending seasons. After you open
+the game with the default data or with a mod you created using the tutorial, there are many ways for you to simulate races. The most
+full-fledged accurate, lap by lap simulation is the full simulating feature. To full simulate a race you simply click the simulate
+button, choose a track, the amount of laps and you can start the race. You will see the live timings of the race lap by lap and once your done,
+you can \"save and exit\" with the reutrn button.
+
+However if you dont have the time for that... don't worry, theres options for you too. There is a quick simulate feature which you can use in
+a similar way by clicking the simulate button and instead of clicking full simulate, clicking quick simulate. This way you can quickly simulate
+race by race.
+
+Is that still not fast enough for you?! Well I've adressed that too with a bulk quick simulate feature which allows you to simulate a chosen
+amount of races in a matter of seconds. (Don't sim more than 400 races or 300 if you modded the game) 
+
+Enjoy!"
+
+[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]

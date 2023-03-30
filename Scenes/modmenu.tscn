@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 2
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 1 )
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.192157, 0.192157, 0.192157, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 344.0
+margin_top = 150.0
+margin_right = 673.0
+margin_bottom = 433.0
+color = Color( 0.0941176, 0.298039, 0.611765, 1 )
+
+[node name="quick" type="Button" parent="."]
+margin_left = 369.0
+margin_top = 235.0
+margin_right = 647.0
+margin_bottom = 313.0
+text = "Launch Mod"
+
+[node name="full" type="Button" parent="."]
+margin_left = 369.0
+margin_top = 328.0
+margin_right = 647.0
+margin_bottom = 406.0
+text = "Copy Directly (Not Recommended)"
+
+[node name="tracks" type="OptionButton" parent="."]
+margin_left = 390.0
+margin_top = 184.0
+margin_right = 621.0
+margin_bottom = 211.0
+text = "Select the mod you want"

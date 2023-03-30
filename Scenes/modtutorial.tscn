@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/modtutorial.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1035.0
+margin_bottom = 615.0
+color = Color( 0.227451, 0.282353, 0.4, 1 )
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 377.0
+margin_top = 527.0
+margin_right = 968.0
+margin_bottom = 582.0
+rect_pivot_offset = Vector2( 206, 34 )
+text = "Main Menu"
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 528.0
+margin_right = 348.0
+margin_bottom = 583.0
+rect_pivot_offset = Vector2( 206, 34 )
+text = "Repository Tutorial"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 707.0
+margin_top = 130.0
+margin_right = 986.0
+margin_bottom = 171.0
+text = "Copy Mod Template to Clipboard"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 60.0
+margin_top = 53.0
+margin_right = 963.0
+margin_bottom = 492.0
+rect_scale = Vector2( 0.997969, 0.998481 )
+text = "So you are here to mod the Motorsport Simulator game, or maybe you just want to see how it works. Well either way this guide is for you:
+
+**note: modding recquires some basic knowledge of the json structure and is not recommended without this knowledge!**
+
+
+1.  Use the button on the right to copy the base save JSON string
+
+
+2. DRIVERS: To mod the drivers in the game you will be editing the array called \"d.\" Each driver has 2 main properties; racecraft and
+awareness. Their racecraft controls their raw pace and ability to go fast typically restricted from 0 to 100 but you can experiment. Awareness
+controls exactly that, how aware they are which affects their rates of DNFing and crashing. It is highly recommended to keep Awareness
+below 100 and above 40 or it can cause very confusing scenarios. They also have a team property which you can use to change the team 
+they are in and the number just correpsonds to their teams' position in the \"t\" or teams array. You can add or remove drivers as well and,
+any team can have any amount of drivers, just make sure to add and remove commas when doing this to keep the separators.
+
+3. CONSTRUCTORS: Similarly to drivers, the teams are stored in an array, except the array is called \"t\" instead. Each team has 2 main
+properties correlating to the car; its speed and its reliability which are quite self explanatory. It is once again, highly recommended to keep
+them between 0 and 100 while speed can be made higher without much consequence or effect whatsoever.
+
+4. POINTS: You can also modify the point system and whether or not there is a fastest lap point. The point system is controlled by the \"pts\"
+array you can find under the \"other\" dictionary; the first value will be points for 1st place, 2nd for 2nd place and so on. Then for fastest lap
+you can just edit the \"fl\" array; the first value, the boolean, just defines whether a point is given or not and the second value is how many
+points are given!
+
+Have fun modding and make sure to send you mods to itsabby#7677 on discord and I might add them into the game. You can also now make your own repository of mods on pastebin which is usable in the mod library "
+autowrap = true
+
+[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
